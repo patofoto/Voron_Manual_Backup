@@ -114,3 +114,9 @@ default_qos = 0
 output_path = ~/timelapse/
 ffmpeg_binary_path = /usr/bin/ffmpeg
 
+[power shelly_relay]
+type = shelly
+address = 10.0.20.228
+user = dp@psuarez.com
+password = UG8PsMigeYgA
+
