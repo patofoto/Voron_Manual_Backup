@@ -111,12 +111,22 @@ publish_split_status = True
 default_qos = 0
 
 [timelapse]
-output_path = ~/timelapse/
-ffmpeg_binary_path = /usr/bin/ffmpeg
+output_path = ~/printer_data/timelapse/
+frame_path = /tmp/timelapse/printer
 
 [power shelly_relay]
 type = shelly
 address = 10.0.20.228
 user = dp@psuarez.com
 password = UG8PsMigeYgA
+
+[update_manager Klippain-ShakeTune]
+type = git_repo
+origin = https://github.com/Frix-x/klippain-shaketune.git
+path = ~/klippain_shaketune
+virtualenv = ~/klippain_shaketune-env
+requirements = requirements.txt
+system_dependencies = system-dependencies.json
+primary_branch = main
+managed_services = klipper
 
